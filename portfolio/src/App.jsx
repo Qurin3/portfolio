@@ -1,12 +1,13 @@
 
-
 function App() {
- 
-
   return (
-    <>
-      <h1>Hello World</h1>
-    </>
+    <div>
+      <section>Profile</section>
+      <section>Paralex</section>
+      <section>Project1</section>
+      <section>Project2</section>
+      <section>Contact me</section>
+    </div>
   )
 }
 
