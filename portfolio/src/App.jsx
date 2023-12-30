@@ -1,8 +1,11 @@
-
-function App() {
+import "./app.scss"
+import Navbar from "./components/navbar/Navbar"
+const App = () => {
   return (
     <div>
-      <section>Profile</section>
+      <section>
+        <Navbar />
+      </section>
       <section>Paralex</section>
       <section>Project1</section>
       <section>Project2</section>
