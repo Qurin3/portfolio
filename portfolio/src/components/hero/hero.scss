@@ -9,14 +9,26 @@
         height: 100%;
         width: 50%;
         margin: auto;
-
-
+        .imageContainer {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 45%;
+            
+        }
+    
         .textContainer {
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             gap: 40px;
+
+            
 
             h2 { 
                 font-size: 30px;
@@ -26,6 +38,7 @@
 
             h1  {
                 font-size: 88px;
+                gap: 20px;
             }
             
             .buttons { 
@@ -47,12 +60,7 @@
         }
     }
 
-    .imageContainer {
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
+    
 
     .slidingTextContainer{
         position: absolute;
@@ -65,4 +73,3 @@
     }
 }
 
-  

@@ -1,7 +1,7 @@
 import React from "react";
 import "./hero.scss";
 import { motion } from "framer-motion";
-
+import Blob from './Blob'
 const textVariants = {
   initial: {
     x: -500,
@@ -44,6 +44,7 @@ const sliderVariants = {
 
 const Hero = () => {
   return (
+    
     <div className="hero">
       <div className="wrapper">
         <motion.div
@@ -53,7 +54,7 @@ const Hero = () => {
           animate="animate"
         >
           <motion.h2 variants={textVariants}>FILIP KŁUSEK</motion.h2>
-          <motion.h1 variants={textVariants}>Front-End Developer</motion.h1>
+          <motion.h1 variants={textVariants}>Front-End Developer </motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <motion.button variants={textVariants}>
               See the Latest work
@@ -62,13 +63,15 @@ const Hero = () => {
           </motion.div>
           <motion.img variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" />
         </motion.div>
+        <div className="imageContainer">
+          <Blob />
+        </div>
+        
       </div>
       <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">
         FILIP KŁUSEK FRONTEND DEVELOPER
       </motion.div>
-      <div className="imageContainer">
-        <img src="/hero.png" alt="profile-picture" />
-      </div>
+      
     </div>
   );
 };
