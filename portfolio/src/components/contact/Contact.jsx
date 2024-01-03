@@ -2,22 +2,21 @@ import React, { useRef,useState } from 'react'
 import "./contact.scss"
 import {animate, motion} from 'framer-motion'
 import emailjs from '@emailjs/browser'
-const variants = {
-    initial: {
-        x: -500,
-        y: 100,
-        opacity: 0
-    },
-    animate: {
-        x: 0,
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: 1,
-            staggerChildren: 0.1
-        }
-    },
-};
+// const variants = {
+//     initial: {
+//         x: -500,
+//         y: 100,
+//         opacity: 0
+//     },
+//     animate: {
+//         x: 0,
+//         opacity: 1,
+//         y: 0,
+//         transition: {
+//             duration: 1,
+//         }
+//     },
+// };
     
 const Contact = () => {
     const formRef = useRef()
@@ -35,14 +34,14 @@ const Contact = () => {
       };
     
   return (
-    <motion.div className='contact' variants={variants} initial="initial" whileInView="animate">
-        <motion.div className="textContainer" variants={variants}>
-            <motion.h1 variants={variants}>Lets work together!</motion.h1>
-            <motion.div className="item" variants={variants}>
+    <motion.div className='contact'>
+        <motion.div className="textContainer" >
+            <motion.h1 >Lets work together!</motion.h1>
+            <motion.div className="item" >
                 <h2>Mail</h2>
                 <span>filip.klv2@gmail.com</span>
             </motion.div>
-            <motion.div className="item" variants={variants}>
+            <motion.div className="item" >
                 <h2>Phone</h2>
                 <span>509 794 050</span>
             </motion.div>
@@ -51,8 +50,7 @@ const Contact = () => {
             <motion.form
             ref={formRef}
             onSubmit={sendEmail}
-            initial={{opacity: 0}}
-            whileInView={{opacity: 1}}>
+    >
                 <input type="text" placeholder='Name' required name='name' />
                 <input type="email" placeholder='Email' required name='email' />
                 <textarea rows={8} placeholder='Message' name='message'/>

@@ -21,18 +21,14 @@ import { useRef } from "react";
     const ref = useRef()
     const { scrollYProgress } = useScroll({
       target: ref,
-      //offset: ["end end", "start start"],
     });
-
-    const y = useTransform(scrollYProgress,[0,1],[-100,100]);
-
-    
+    const y = useTransform(scrollYProgress, [0, 1], [-100, 100]);
     return( 
     <section >
       <div className="container">
         <div className="wrapper">
           <div className="imageContainer" ref={ref}>
-            <img src={item.img} alt={item.img}  />
+            <img src={item.img}/>
           </div>
         <motion.div className="textContainer" style={{y}}> 
           <h2>{item.title}</h2>
@@ -50,11 +46,11 @@ import { useRef } from "react";
     const ref = useRef();
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["end end", "start start"],
+    
   });
 
   const scaleX = useSpring(scrollYProgress,{
-    stiffness:100,
+    stiffness: 50,
     damping: 30,
   })
   return (
