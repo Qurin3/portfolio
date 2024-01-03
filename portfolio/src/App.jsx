@@ -10,16 +10,15 @@ const App = () => {
     <div>
       <section id="Home">
         <Navbar />
-        <Hero />
+         <Hero /> 
       </section>
       <section id="Services"><Parallax type="services" /></section>
-      <section><Services /></section>
-      <section id="Portfolio"><Parallax type="portfolio" /></section>
-      <Portfolio />
-      <section id="Contact">
+      <section><Services /></section> 
+      <section id="Portfolio"><Parallax type="portfolio" /></section> 
+       <Portfolio />
+       <section id="Contact">
         <Contact />
       </section>
-      <section id="About">About</section>
     </div>
   )
 }

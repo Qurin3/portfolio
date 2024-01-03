@@ -12,7 +12,7 @@ export const Navbar = () => {
          animate={{opacity:1, scale: 1}}
          transition={{duration: 0.5}}
          >
-          Filip Kłusek</motion.span>
+        </motion.span>
         <div className="social">
             <a href="https://www.linkedin.com/in/filip-kłusek-510725259/">
                 <img src="/linkedin.png" alt="linkedin-image"/>
