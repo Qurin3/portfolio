@@ -71,9 +71,13 @@
             }
 
             h2{
-                font-size: 72px;
+                font-size: 58px;
                 @include mobile {
                     font-size: 36px;
+                    
+                }
+                @media (max-width: 1024px) {
+                    font-size: 48px; 
                     
                 }
             }
