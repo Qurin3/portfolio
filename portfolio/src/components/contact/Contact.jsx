@@ -1,22 +1,23 @@
 import React, { useRef,useState } from 'react'
 import "./contact.scss"
-import {animate, motion} from 'framer-motion'
+import {animate, motion, useInView} from 'framer-motion'
 import emailjs from '@emailjs/browser'
-// const variants = {
-//     initial: {
-//         x: -500,
-//         y: 100,
-//         opacity: 0
-//     },
-//     animate: {
-//         x: 0,
-//         opacity: 1,
-//         y: 0,
-//         transition: {
-//             duration: 1,
-//         }
-//     },
-// };
+
+const Variants = {
+    initial: {
+      x: -500,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+  
     
 const Contact = () => {
     const formRef = useRef()
@@ -32,10 +33,12 @@ const Contact = () => {
             setError(true)
           });
       };
+      const ref = useRef()
+      const isInView = useInView(ref,{margin:"-100px"})
     
   return (
     <motion.div className='contact'>
-        <motion.div className="textContainer" >
+        <motion.div className="textContainer" variants={Variants} initial="initial" ref={ref} animate={isInView && 'animate'}>
             <motion.h1 >Lets work together!</motion.h1>
             <motion.div className="item" >
                 <h2>Mail</h2>
@@ -50,6 +53,10 @@ const Contact = () => {
             <motion.form
             ref={formRef}
             onSubmit={sendEmail}
+            variants={Variants}
+            initial="initial"
+            
+            animate={isInView && 'animate'}
     >
                 <input type="text" placeholder='Name' required name='name' />
                 <input type="email" placeholder='Email' required name='email' />
