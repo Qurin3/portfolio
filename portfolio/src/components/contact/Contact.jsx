@@ -1,21 +1,21 @@
 import React, { useRef,useState } from 'react'
 import "./contact.scss"
-import {animate, motion, useInView} from 'framer-motion'
+import {motion, useInView} from 'framer-motion'
 import emailjs from '@emailjs/browser'
 
 const Variants = {
-    initial: {
-      x: -500,
-      opacity: 0,
+   initial: {
+    x: -80,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
     },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 1,
-        staggerChildren: 0.1,
-      },
-    },
+  },
   };
   
     
@@ -37,14 +37,14 @@ const Contact = () => {
       const isInView = useInView(ref,{margin:"-100px"})
     
   return (
-    <motion.div className='contact'>
-        <motion.div className="textContainer" variants={Variants} initial="initial" ref={ref} animate={isInView && 'animate'}>
-            <motion.h1 >Lets work together!</motion.h1>
-            <motion.div className="item" >
+    <motion.div className='contact' variants={Variants} initial="initial" ref={ref} animate={isInView && 'animate'}>
+        <motion.div className="textContainer" variants={Variants}>
+            <motion.h1 variants={Variants}>Lets work together!</motion.h1>
+            <motion.div className="item" variants={Variants}>
                 <h2>Mail</h2>
                 <span>filip.klv2@gmail.com</span>
             </motion.div>
-            <motion.div className="item" >
+            <motion.div className="item" variants={Variants} >
                 <h2>Phone</h2>
                 <span>509 794 050</span>
             </motion.div>
