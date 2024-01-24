@@ -6,15 +6,15 @@ import { useRef } from "react";
   const items = [
     {
       id: 1,
-      title: "React Car rental app",
-      img: "https://images.pexels.com/photos/3330895/pexels-photo-3330895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident",
+      title: "NextJS Car rental",
+      img: "../../public/rental1.jpg",
+      desc: "For this project I used TypeScript, Next and Tailwind. My goal was to learn how to use the API, so I used Cars by API Ninjas."
     },
     {
       id: 2,
       title: "KingoPedia",
-      img: "https://images.pexels.com/photos/796206/pexels-photo-796206.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident",
+      img: "../../public/King.jpg",
+      desc: "I noticed that there is no good API on the web that contains all the works of Stephen King. Being a big fan, I couldn't let this pass and decided to create my own API and a page to browse the books of the master of horror. The application is still in production, but it will appear here soon :)",
     },
   ];
   const Single = ({ item }) => {
@@ -44,20 +44,12 @@ import { useRef } from "react";
   
   const Portfolio = () => {
     const ref = useRef();
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    
-  });
+  
 
-  const scaleX = useSpring(scrollYProgress,{
-    stiffness: 50,
-    damping: 30,
-  })
   return (
     <div className="portfolio" ref={ref}>
       <div className="progress">
         <h1>Featured Works</h1>
-        <motion.div style={{scaleX}} className="progressBar"></motion.div>
       </div>
       {items.map((item) => (
         <Single item={item} key={item.id} />

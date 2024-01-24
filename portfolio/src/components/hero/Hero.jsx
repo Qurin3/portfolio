@@ -2,6 +2,7 @@ import React from "react";
 import "./hero.scss";
 import { motion } from "framer-motion";
 import Blob from './Blob'
+import Image from "../../../public/profile2.png"
 const textVariants = {
   initial: {
     x: -500,
@@ -38,16 +39,17 @@ const Hero = () => {
           <motion.h2 variants={textVariants}> 👋🏼FILIP KŁUSEK</motion.h2>
           <motion.h1 variants={textVariants}>Front-End Developer </motion.h1>
           <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
-              See the Latest work
+            <motion.button variants={textVariants} >
+              Scroll down to see the Latest work or Contact me :D
             </motion.button>
-            <motion.button variants={textVariants}>Contact me</motion.button>
           </motion.div>
           <motion.img variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" />
         </motion.div>
-        <div className="imageContainer">
+        <motion.div className="imageContainer" variants={textVariants}>
          {/*   <Blob />   */} 
-        </div>
+         <motion.img src={Image} alt="profile" variants={textVariants} initial="initial"
+          animate="animate"/>
+        </motion.div>
         
       </div>
       <div className="slidingTextContainer">
