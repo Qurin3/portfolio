@@ -11,6 +11,10 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(190, 188, 188, 0.5);
+    .loliImage {
+        height: 100%;
+        position: absolute; // Dodaj odpowiednie style dla obrazka
+      }
     .text {
         width: 70%;
         max-width: 800px;
@@ -20,6 +24,19 @@
         color: black; /* Zmiana koloru tekstu na biały dla lepszej widoczności */
         letter-spacing: 1px;
         margin: 0 auto;
+        @media (max-width: 1024px){
+            height: 70%;
+            width: 100%;
+            gap: 20px;
+            
+        }
+        @include mobile {
+            height: 50%;
+            width: 100%;
+            gap: 20px;
+            align-items: center;
+            text-align: center;
+        }
     }
     h1{
         margin-bottom: 20px;
@@ -28,14 +45,22 @@
     .imageCon{
         height: 100%;
         position: absolute;
-        
+        margin-left: 50px;
         left: 0;
         display: flex;
         width: 50%;
+        @media (max-width: 1024px){
+            height: 0%;
+            width: 100%;
+            gap: 20px;
+            
+        }
         @include mobile {
-            height: 50%;
+            height: 0%;
             width: 100%;
             top: unset;
+            display: flex;
+            
             
         }
     }
