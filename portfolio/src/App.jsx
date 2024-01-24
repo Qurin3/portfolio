@@ -3,7 +3,7 @@ import Contact from "./components/contact/Contact"
 import Hero from "./components/hero/Hero"
 import Navbar from "./components/navbar/Navbar"
 import Portfolio from "./components/portfolio/Portfolio"
-import Services from "./components/services/Services"
+import About from "./components/About/About"
 const App = () => {
   return (
     <div>
@@ -11,7 +11,9 @@ const App = () => {
         <Navbar />
          <Hero /> 
       </section>
-      <section id="Portfolio"><Services /></section> 
+      <section id="About">
+        <About />
+      </section>
        <Portfolio />
        <section id="Contact">
         <Contact />

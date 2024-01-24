@@ -44,12 +44,19 @@ import { useRef } from "react";
   
   const Portfolio = () => {
     const ref = useRef();
-  
+    const { scrollYProgress } = useScroll({
+      target: ref,
+    });
+    const scaleX = useSpring(scrollYProgress,{
+      stiffness: 50,
+      damping: 30,
+    })
 
   return (
     <div className="portfolio" ref={ref}>
       <div className="progress">
         <h1>Featured Works</h1>
+        <motion.div style={{scaleX}} className="progressBar"></motion.div>
       </div>
       {items.map((item) => (
         <Single item={item} key={item.id} />

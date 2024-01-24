@@ -1,0 +1,37 @@
+.wrap {
+    background-image: url(../../../public/wavesOpacity.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    .button1 {
+        background-color: #e7008a;
+        color: white;
+        font-weight: 800;
+        border: none;
+        font-size: 20px;
+        border-radius: 10px;
+        padding: 10px;
+        width: 300px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    .text {
+        width: 70%;
+        max-width: 800px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 700;
+        color: white; /* Zmiana koloru tekstu na biały dla lepszej widoczności */
+        letter-spacing: 1px;
+        margin: 0 auto;
+    }
+    h1{
+        margin-bottom: 20px;
+    }
+}
