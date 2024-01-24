@@ -53,7 +53,7 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>FILIP KŁUSEK</motion.h2>
+          <motion.h2 variants={textVariants}> 👋🏼FILIP KŁUSEK</motion.h2>
           <motion.h1 variants={textVariants}>Front-End Developer </motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <motion.button variants={textVariants}>
@@ -64,7 +64,7 @@ const Hero = () => {
           <motion.img variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" />
         </motion.div>
         <div className="imageContainer">
-          <Blob />
+         {/*   <Blob />   */} 
         </div>
         
       </div>
