@@ -1,3 +1,6 @@
+@import "../../app.scss";
+
+
 .wrap {
     background-image: url(../../../public/wavesOpacity.svg);
     background-repeat: no-repeat;
@@ -7,7 +10,35 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(190, 188, 188, 0.5);
+    .text {
+        width: 70%;
+        max-width: 800px;
+        text-align: center;
+        font-size: 25px;
+        font-weight: 400;
+        color: black; /* Zmiana koloru tekstu na biały dla lepszej widoczności */
+        letter-spacing: 1px;
+        margin: 0 auto;
+    }
+    h1{
+        margin-bottom: 20px;
+        
+    }
+    .imageCon{
+        height: 100%;
+        position: absolute;
+        
+        left: 0;
+        display: flex;
+        width: 50%;
+        @include mobile {
+            height: 50%;
+            width: 100%;
+            top: unset;
+            
+        }
+    }
     .button1 {
         background-color: #e7008a;
         color: white;
@@ -19,19 +50,5 @@
         width: 300px;
         cursor: pointer;
         margin-top: 20px;
-    }
-
-    .text {
-        width: 70%;
-        max-width: 800px;
-        text-align: center;
-        font-size: 30px;
-        font-weight: 700;
-        color: white; /* Zmiana koloru tekstu na biały dla lepszej widoczności */
-        letter-spacing: 1px;
-        margin: 0 auto;
-    }
-    h1{
-        margin-bottom: 20px;
     }
 }
