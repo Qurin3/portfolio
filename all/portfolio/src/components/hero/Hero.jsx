@@ -2,6 +2,7 @@ import React from "react";
 import "./hero.scss";
 import { motion } from "framer-motion";
 import Blob from './Blob'
+import loli from "../../../public/loli.png"
 import Image from "../../../public/profile2.png"
 const textVariants = {
   initial: {
@@ -46,7 +47,7 @@ const Hero = () => {
         </motion.div>
         <motion.div className="imageContainer" variants={textVariants}>
           {/*   <Blob />   */}
-          <motion.img src={Image} alt="profile" variants={textVariants} initial="initial"
+          <motion.img src={loli} alt="profile" variants={textVariants} initial="initial"
             animate="animate" />
         </motion.div>
 
