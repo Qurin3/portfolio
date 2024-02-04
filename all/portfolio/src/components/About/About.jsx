@@ -14,7 +14,7 @@ const About = () => {
           <p>
             I am an enthusiastic front-end developer with a passion for creating compelling web experiences. Proficient in React, Next.js, Tailwind CSS, and TypeScript, I combine creativity with technology to bring ideas to life. Currently studying Computer Science, I am also interested in backend development. With previous corporate experience, I bring technical skills and professionalism to my work. Let's create something extraordinary!
           </p>
-          <button className='button1'>Check out my CV!</button>
+          <button className='button1'><a href="https://drive.google.com/file/d/1BOBNgjyoixAkv_OpSp0Ew5QO5SnsCHif/view?usp=sharing" target='blank'>Check out my CV!</a></button>
         </div>
       </div>
     </>

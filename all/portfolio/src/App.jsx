@@ -9,15 +9,15 @@ const App = () => {
     <div>
       <section id="Home">
         <Navbar />
-         <Hero /> 
+        <Hero />
       </section>
       <section id="About">
         <About />
       </section>
       <div id="Portfolio">
-       <Portfolio/>
+        <Portfolio />
       </div>
-       <section id="Contact">
+      <section id="Contact">
         <Contact />
       </section>
     </div>
